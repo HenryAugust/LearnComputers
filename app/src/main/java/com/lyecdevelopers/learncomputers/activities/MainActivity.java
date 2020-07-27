@@ -1,7 +1,6 @@
 package com.lyecdevelopers.learncomputers.activities;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -44,10 +43,9 @@ public class MainActivity extends AppCompatActivity implements NotesItemsListene
         if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
 
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-            getSupportActionBar().setTitle("Details");
-            toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+
+            getSupportActionBar().setTitle("Home");
+
 
         }
     }
