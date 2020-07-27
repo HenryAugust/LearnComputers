@@ -20,4 +20,12 @@ public class Notes {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public String getDescrpiton() {
+        return descrpiton;
+    }
+
+    public void setDescrpiton(String descrpiton) {
+        this.descrpiton = descrpiton;
+    }
 }
