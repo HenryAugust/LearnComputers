@@ -44,7 +44,6 @@ public class SingleNotesDetail extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setTitle("Details");
-            toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
             toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
 
         }
