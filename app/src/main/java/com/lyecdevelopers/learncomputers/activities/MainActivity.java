@@ -96,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements NotesItemsListene
     @Override
     public void onClick(Notes notes) {
         Intent intent = new Intent(MainActivity.this, SingleNotesDetail.class);
-        intent.putExtra("Title", notes.getTitle());
-        intent.putExtra("Descripition", notes.getDescrpiton());
+        intent.putExtra("title", notes.getTitle());
+        intent.putExtra("description", notes.getDescrpiton());
         startActivity(intent);
         finish();
     }

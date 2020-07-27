@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".walkthrough.WalkthroughActivity" />
+        <activity android:name=".activities.SingleNotesDetail" />
     </application>
 
 </manifest>
