@@ -36,4 +36,17 @@
     </string-array>
 
 
+    <string-array name="descriptions_strings">
+        <item>
+            Basics of Computers Tutorial
+            A computer is an electronic device that receives input, stores or processes the input as per user instructions and provides output in desired format. Computers have become an integral part of our lives because they can accomplish easy tasks repeatedly without getting bored and complex ones repeatedly without committing errors. In this tutorial we will discuss in detail about the different parts of computer that enable it to carry out tasks efficiently and correctly. We will also discuss about microprocessors, the brain of computers, which actually do all the assigned tasks.
+            Audience
+This tutorial is designed for anyone who wants to understand the basic concepts of what a computer is and how it functions.
+
+Prerequisites
+There are no prerequisites for this course except a desire to learn about how a computer works. Having worked on a computer would be an added advantage in completing the tutorial.
+        </item>
+    </string-array>
+
+
 </resources>
