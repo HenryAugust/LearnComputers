@@ -4,11 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <androidx.appcompat.widget.Toolbar
+        android:background="?attr/colorPrimary"
         android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white"/>
 
     <LinearLayout
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -22,15 +26,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_10sdp"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_16ssp" />
 
-        <TextView
-            android:id="@+id/notes_description"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp"
-            android:text="Notes"
-            android:textSize="@dimen/_18ssp" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notes_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp" />
+        </ScrollView>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
