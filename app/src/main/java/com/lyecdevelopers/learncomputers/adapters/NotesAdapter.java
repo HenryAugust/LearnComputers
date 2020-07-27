@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lyecdevelopers.learncomputers.R;
+import com.lyecdevelopers.learncomputers.interfaces.NotesItemsListener;
 import com.lyecdevelopers.learncomputers.models.Notes;
 
 import java.util.List;
@@ -17,10 +18,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesAdapter
 
 
     private List<Notes> notesList;
+    NotesItemsListener listener;
 
-    public NotesAdapter(List<Notes> notesList) {
+    public NotesAdapter(List<Notes> notesList, NotesItemsListener listener) {
         this.notesList = notesList;
+        this.listener = listener;
     }
+
+
 
     @NonNull
     @Override
@@ -48,13 +53,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesAdapter
 
         public NotesAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
-
             mTitle = itemView.findViewById(R.id.txttitle);
-
         }
 
         public void onBind(Notes notes) {
             mTitle.setText(notes.getTitle());
+            itemView.setOnClickListener(view -> {
+                listener.onClick(notes);
+            });
         }
     }
 }

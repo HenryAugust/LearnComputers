@@ -1,5 +1,6 @@
-package com.lyecdevelopers.learncomputers;
+package com.lyecdevelopers.learncomputers.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -7,13 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lyecdevelopers.learncomputers.R;
 import com.lyecdevelopers.learncomputers.adapters.NotesAdapter;
+import com.lyecdevelopers.learncomputers.interfaces.NotesItemsListener;
 import com.lyecdevelopers.learncomputers.models.Notes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NotesItemsListener {
 
     private static final String TAG = "MainActivity";
     RecyclerView mRecyclerView;
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "setData: "+notesList);
 
 
-        mNotesAdapter = new NotesAdapter(notesList);
+        mNotesAdapter = new NotesAdapter(notesList, this);
 
     }
 
@@ -88,5 +91,14 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setAdapter(mNotesAdapter);
+    }
+
+    @Override
+    public void onClick(Notes notes) {
+        Intent intent = new Intent(MainActivity.this, SingleNotesDetail.class);
+        intent.putExtra("Title", notes.getTitle());
+        intent.putExtra("Descripition", notes.getDescrpiton());
+        startActivity(intent);
+        finish();
     }
 }

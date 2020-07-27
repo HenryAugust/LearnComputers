@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.button.MaterialButton;
-import com.lyecdevelopers.learncomputers.MainActivity;
+import com.lyecdevelopers.learncomputers.activities.MainActivity;
 import com.lyecdevelopers.learncomputers.R;
 import com.lyecdevelopers.learncomputers.walkthrough.adapter.OnBoardingAdapter;
 import com.lyecdevelopers.learncomputers.walkthrough.model.OnBoardingItem;

@@ -18,12 +18,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/notes_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_10sdp"
             android:textSize="@dimen/_20ssp" />
 
         <TextView
+            android:id="@+id/notes_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_10sdp"
