@@ -1,10 +1,12 @@
 package com.lyecdevelopers.learncomputers.activities;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NotesItemsListene
     private static final String TAG = "MainActivity";
     RecyclerView mRecyclerView;
     NotesAdapter mNotesAdapter;
+    Toolbar toolbar;
 
 
     @Override
@@ -29,10 +32,24 @@ public class MainActivity extends AppCompatActivity implements NotesItemsListene
         setContentView(R.layout.activity_main);
 
         mRecyclerView = findViewById(R.id.recyclerView);
+        toolbar = findViewById(R.id.toolbar);
 
+        initToolbar(toolbar);
         setData();
         initRecycler();
 
+    }
+
+    private void initToolbar(Toolbar toolbar) {
+        if (getSupportActionBar() == null) {
+            setSupportActionBar(toolbar);
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setTitle("Details");
+            toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+
+        }
     }
 
     private void setData() {
