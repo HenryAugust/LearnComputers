@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.lyecdevelopers.learncomputers"
+        minSdkVersion 25
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    // app compat
+    def  appcompat_version = "1.1.0"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+
+    //swipe to refresh
+    def swiperefreshlayout = "1.1.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout"
+
+    //constraint layouts
+    def constraint_version = "1.1.3"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
+
+    //alert dialog
+    def cf_alert_version = "1.3.1"
+    implementation "com.crowdfire.cfalertdialog:cfalertdialog:$cf_alert_version"
+
+    //Cardview
+    def cardview_version = "1.0.0"
+    implementation "androidx.cardview:cardview:$cardview_version"
+
+    //ViewPager2
+    def viewpager_version = "1.0.0"
+    implementation "androidx.viewpager2:viewpager2:$viewpager_version"
+
+    //Material Design
+    def material_version = "1.1.0"
+    implementation "com.google.android.material:material:$material_version"
+
+    //pinView
+    def pinview_version = "1.4.3"
+    implementation "com.chaos.view:pinview:$pinview_version"
+
+    //recyclerview
+    def recyclerview_version = "1.1.0"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    //circle image view
+    def circle_image_versiom = "3.1.0"
+    implementation "de.hdodenhof:circleimageview:$circle_image_versiom"
+
+    //tablayout
+    def smarttablayout_version = "2.0.0@aar"
+    implementation "com.ogaclejapan.smarttablayout:library:$smarttablayout_version"
+
+    //dimensions
+    def sdp_android_version = "1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$sdp_android_version"
+    implementation "com.intuit.ssp:ssp-android:$sdp_android_version"
+
+
+
+}

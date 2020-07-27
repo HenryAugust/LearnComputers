@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Learn Computers</string>
+    <string name="txtSmart">Learn</string>
+    <string name="txtGrocery">Computers</string>
+    <string name="txtNextbtn">Next</string>
+    <!--Walkthrough text-->
+    <string name="txtLongLorem">Lorem ipsum dolor sit amet, placerat purus felis, in sagittis
+        praesent, malesuada odio eu.
+    </string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="please_wait">Please Wait</string>
+</resources>
