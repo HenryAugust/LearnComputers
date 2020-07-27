@@ -62,7 +62,7 @@ public class SingleNotesDetail extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
-            super.onBackPressed();
+            onBackPressed();
             return true;
         }
 
