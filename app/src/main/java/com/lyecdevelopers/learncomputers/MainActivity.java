@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recyclerView);
 
         initRecycler();
+        setData();
 
+    }
+
+    private void setData() {
     }
 
     private void initRecycler() {

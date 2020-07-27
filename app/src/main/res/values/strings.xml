@@ -9,4 +9,31 @@
     </string>
     <string name="edit_profile">Edit Profile</string>
     <string name="please_wait">Please Wait</string>
+
+
+    <string-array name="title_strings">
+        <item>Basics of Computers- Home</item>
+        <item>Basics of Computers - Introduction</item>
+        <item>Basics of Computers - Classifications</item>
+        <item>Basics of Computers - S/W Concepts</item>
+        <item>Basics of Computers - System S/W</item>
+        <item>Basics of Computers  - Functions of OS</item>
+        <item>Basics of Computers - Types of OS</item>
+        <item>Basics of Computers  - Utility Software</item>
+        <item>Basics of Computers - Open Source Software</item>
+        <item>Basics of Computers - Office Tools</item>
+        <item>Basics of Computers - Domain Specific Tools</item>
+        <item>Basics of Computers - Number System</item>
+        <item>Basics of Computers - Microprocessor Concepts</item>
+        <item>Basics of Computers - Evaluation of Microprocessor
+</item>
+
+        <item>Basics of Computers - Primary Memory</item>
+        <item>Basics of Computers - Secondary Memory</item>
+        <item>Basics of Computers - Input/Output Ports</item>
+
+
+    </string-array>
+
+
 </resources>
