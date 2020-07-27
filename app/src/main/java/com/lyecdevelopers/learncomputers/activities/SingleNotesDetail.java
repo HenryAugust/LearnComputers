@@ -27,16 +27,17 @@ public class SingleNotesDetail extends AppCompatActivity {
         mDescripiton = findViewById(R.id.notes_description);
         toolbar = findViewById(R.id.toolbar);
 
+        //initialise toolbar
+        initToolbar(toolbar);
 
-        initToolbar();
 
-
+        //set data
         setData(mTitle, mDescripiton);
 
 
     }
 
-    private void initToolbar() {
+    private void initToolbar( Toolbar toolbar) {
         if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
 
