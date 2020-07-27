@@ -66,17 +66,17 @@ public class WalkthroughActivity extends AppCompatActivity {
         List<OnBoardingItem> onBoardingItems = new ArrayList<>();
 
         OnBoardingItem onOnlineShopItem = new OnBoardingItem();
-        onOnlineShopItem.setTitle("We Offer Quality and Fresh groceries");
+        onOnlineShopItem.setTitle("Learn Computers with ease");
         onOnlineShopItem.setDescription(getResources().getString(R.string.txtLongLorem));
         onOnlineShopItem.setImage(R.drawable.images_1);
 
         OnBoardingItem onDeliveryItem = new OnBoardingItem();
-        onDeliveryItem.setTitle("We deliver it directly to you from the farms");
+        onDeliveryItem.setTitle("Learning on the Go");
         onDeliveryItem.setDescription(getResources().getString(R.string.txtLongLorem));
         onDeliveryItem.setImage(R.drawable.images_2);
 
         OnBoardingItem onShoppingItem = new OnBoardingItem();
-        onShoppingItem.setTitle("Try us today with satisfaction");
+        onShoppingItem.setTitle("Computers in your hand");
         onShoppingItem.setDescription(getResources().getString(R.string.txtLongLorem));
         onShoppingItem.setImage(R.drawable.images_3);
 
