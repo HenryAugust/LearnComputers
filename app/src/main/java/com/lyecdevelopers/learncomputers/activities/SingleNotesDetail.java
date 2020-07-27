@@ -31,7 +31,7 @@ public class SingleNotesDetail extends AppCompatActivity {
         initToolbar();
 
 
-        setData();
+        setData(mTitle, mDescripiton);
 
 
     }
@@ -49,7 +49,7 @@ public class SingleNotesDetail extends AppCompatActivity {
         }
     }
 
-    private void setData() {
+    private void setData(TextView mTitle,TextView mDescripiton) {
         String title = getIntent().getStringExtra("title");
         String description = getIntent().getStringExtra("description");
         mTitle.setText(title);
