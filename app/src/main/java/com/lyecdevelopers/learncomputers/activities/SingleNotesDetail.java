@@ -1,8 +1,10 @@
 package com.lyecdevelopers.learncomputers.activities;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -25,14 +27,7 @@ public class SingleNotesDetail extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
 
 
-        if (getSupportActionBar() == null) {
-            setSupportActionBar(toolbar);
-
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setTitle("Details");
-        }
+        initToolbar();
 
 
         setData();
@@ -40,10 +35,33 @@ public class SingleNotesDetail extends AppCompatActivity {
 
     }
 
+    private void initToolbar() {
+        if (getSupportActionBar() == null) {
+            setSupportActionBar(toolbar);
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setTitle("Details");
+        }
+    }
+
     private void setData() {
         String title = getIntent().getStringExtra("title");
         String description = getIntent().getStringExtra("description");
         mTitle.setText(title);
         mDescripiton.setText(description);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+            super.onBackPressed();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
